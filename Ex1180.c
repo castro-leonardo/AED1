@@ -12,7 +12,7 @@ int main () {
     for(int i=0; i<N; i++){
         scanf("%i", &X[i+1]);
         if(X[i+1] < menor){
-            menor=X[i+1];
+            menor=X[i+1];""
         }
     }
 
