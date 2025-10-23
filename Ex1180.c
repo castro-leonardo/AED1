@@ -10,13 +10,13 @@ int main () {
     int X[N];
 
     for(int i=0; i<N; i++){
-        scanf("%i", &X[i+1]);
+        scanf("%i", &X[i]);
         if(X[i+1] < menor){
-            menor=X[i+1];""
+            menor=X[i];
         }
     }
 
-    printf("%i", menor);
+    printf("%i\n", menor);
 
     return 0;
 }
