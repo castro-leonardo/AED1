@@ -84,7 +84,7 @@ int main() {
     while (scanf("%i", &n) != EOF) {
 
         Stack s; Queue q; PQueue pq;
-        iStack(&s); iQueue(&q); iPQ(&pq);
+        iStack(&s); inQueue(&q); iPQ(&pq);
 
         int possibleStack = 1, possibleQueue = 1, possiblePQ = 1;
 
