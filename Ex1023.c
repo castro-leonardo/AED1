@@ -1,3 +1,5 @@
+//agrupar as pessoas pelo consumo medio
+
 #include <string.h>
 #include <stdio.h>
 #include <math.h>
@@ -7,11 +9,14 @@ int main(){
     double consuMedio;
     
     int T=0;
-    int N, X, Y, totaldeX=0, totaldeY=0, prim, consumido[201];
+    int N, X, Y, totaldeX, totaldeY, prim, consumido[201];
 
     while(scanf("%i", &N)){
 
         if(!N) break;
+
+        totaldeX=0;
+        totaldeY=0;
 
         if(T){
             printf("\n");
@@ -45,7 +50,9 @@ int main(){
             }
         }
 
-        consuMedio = ((100 * totaldeY) / totaldeX) / 100.00;
+        consuMedio = (double) totaldeY / totaldeX;
+        consuMedio = floor(consuMedio * 100) / 100.0;
+
 
         printf("\nConsumo medio: %.2lf m3.\n", consuMedio);
 
