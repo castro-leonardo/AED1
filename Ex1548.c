@@ -1,4 +1,4 @@
-//para esse exercicio eu tinha usado a ajuda de uma resolucao que vi dele, imagino que isso tenha causado a similaridade
+//para esse exercicio eu tinha usado a ajuda de uma resolucao que vi dele
 //estou refazendo ele do zero
 
 #include <stdio.h>
