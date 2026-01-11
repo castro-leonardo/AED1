@@ -1,51 +1,46 @@
+//para esse exercicio eu tinha usado a ajuda de uma resolucao que vi dele, imagino que isso tenha causado a similaridade
+//estou refazendo ele do zero
+
 #include <stdio.h>
 #include <stdlib.h>
 
-int compare(const void *a, const void *b) {
+int comparar(const void *a, const void *b){
 
-    return (*(int*)b - *(int*)a); 
+    return (*(int*)b - *(int*)a); //retorna o que foi comparado 
 
 }
 
-/////
+int main(){
+    int N, M;
 
-int main() {
+    int comeco[1000], ordenado[1000];
 
-    int N;
-    scanf("%d", &N);
+///////////////
 
-    while (N--) {
+    scanf("%i", &N);
 
-        int M;
+    for (int i=0;i<N;i++){
 
-        scanf("%d", &M);
+        scanf("%i", &M); //inicio de cada teste
 
-        int original[M], ordenado[M];
+        for (int j=0;j<M ;j++){
 
-        for (int i = 0; i < M; i++) {
-
-            scanf("%d", &original[i]);
-            
-            ordenado[i] = original[i];
+            scanf("%i", &comeco[j]); // era pra ser i-esimo mas fica como j-esimo
+            ordenado[j] = comeco[j]; //
         }
 
-        // dec
-        qsort(ordenado, M, sizeof(int), compare);
+        qsort(ordenado,M,sizeof(int),comparar); //uso do qsort, chama a funcao
 
-        int cont = 0;
+        int contador = 0;
 
-        ////comp
+        for (int j=0;j<M;j++){
 
-        for (int i = 0; i < M; i++) {
-
-            if (original[i] == ordenado[i]) {
-
-                cont++;
+            if (comeco[j] == ordenado[j]){ //compara como estava no comeco e como ficou apos ser ordenado para saber
+                contador++;                //quais nn precisaram trocar
             }
         }
 
-        printf("%d\n", cont);
-
+        printf("%i\n", contador); //printf dentro do for 
     }
 
     return 0;
